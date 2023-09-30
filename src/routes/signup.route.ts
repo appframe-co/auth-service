@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
 
     const userId = userData.id;
 
-    const projectData: TError | TProject = await CreateProject({userId, name: 'Default'});
+    const projectData: TError | TProject = await CreateProject({userId, name: 'My Project'});
     if (isErrorProject(projectData)) {
       return res.json(projectData);
     }
